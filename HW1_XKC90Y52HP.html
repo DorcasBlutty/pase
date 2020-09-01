@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+
+    <!-- STYLES -->
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        display: grid;
+        place-content: center;
+        height: 100vh;
+        width: 100%;
+        padding: 40px;
+        position: relative;
+      }
+      form {
+        min-width: 100%;
+        width: 400px;
+        background-color: #efefef;
+        padding: 20px;
+      }
+      .submit {
+        background-color: limegreen;
+        padding: 10px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      input,
+      textarea {
+        position: relative;
+        margin-bottom: 10px;
+        font-size: 11px;
+        padding: 15px 10px 10px;
+        border: 1px solid lightgrey;
+        background-color: #ffffff;
+        color: #787575;
+        border-radius: 5px;
+        width: 100%;
+        outline: none;
+      }
+
+      .field > * {
+        display: block;
+        margin-bottom: 15px;
+      }
+      .field textarea {
+        min-height: 160px;
+      }
+      .field label {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Contact -->
+    <form>
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input
+          name="first Name"
+          placeholder="Your name.."
+          type="text"
+          id="firstName"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input
+          name="last name"
+          id="lastName"
+          placeholder="Your last name.."
+          type="text"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="country">Country</label>
+        <input
+          name="country"
+          placeholder="Ghana"
+          type="text"
+          id="country"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject">Write something</textarea>
+      </div>
+
+      <button type="submit" class="submit">Submit</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Week #2 Project</title>
+  </head>
+  <body>
+    <h1>Javascript Dom Manipulation</h1>
+    <button id="getDate">Get Date</button>
+    <p id="date"></p>
+
+    <script>
+      var getDateBtn = document.querySelector("#getDate");
+      var dateView = document.querySelector("#date");
+
+      getDateBtn.addEventListener("click", function (event) {
+        dateView.innerHTML = new Date();
+      });
+    </script>
+  </body>
+</html>
