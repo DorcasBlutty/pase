@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid Anchor</title>
+    <style>
+      /* Global */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(188, 219, 193);
+        font-size: 10px;
+        overflow: auto;
+      }
+
+      /* Header */
+      header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+        width: 100%;
+        font-size: 3rem;
+      }
+
+      .container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        font-size: 200%;
+      }
+
+      .world {
+        margin: 2rem 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-45%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5rem solid whitesmoke;
+        height: 8rem;
+        width: 45%;
+        background-color: rgb(255, 255, 255);
+      }
+
+      hr {
+        background-color: black;
+        width: 100%;
+      }
+      .world hr {
+        background-color: black;
+        height: 100%;
+        width: 1rem;
+      }
+
+      .world > * {
+        padding: 1rem;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin: 8rem auto;
+        overflow: auto;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        width: 30rem;
+        height: 15rem;
+        background-color: rgb(255, 255, 255);
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Covid Tracking Web App</h1>
+    </header>
+
+    <div class="container">
+      <div class="world">
+        <h1>World</h1>
+        <hr />
+        <p><strong>Cases: </strong> <span>{{countries[0].cases}}</span></p>
+
+        <p>
+          <strong>Recoveries: </strong> <span>{{countries[0].recovered}}</span>
+        </p>
+
+        <p><strong>Death: </strong> <span>{{countries[0].deaths}}</span></p>
+      </div>
+
+      <div class="cards">
+        {% for country in countries[1:] %}
+        <div class="card">
+          <h2>{{country.country}}</h2>
+          <hr />
+          <p><strong>Cases: </strong> <span>{{ country.cases}}</span></p>
+          <p>
+            <strong>Recoveries: </strong> <span>{{ country.recovered}}</span>
+          </p>
+          <p><strong>Death : </strong> <span>{{ country.deaths }}</span></p>
+        </div>
+
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+}
+
+nav {
+  height: 50px;
+  width: 100%;
+  box-shadow: 0 1px 7px 0.2px;
+  line-height: 50px;
+  padding: 0 100px;
+  background: #ddd;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.world {
+  margin: 30px auto;
+  width: 40%;
+  border-radius: 10px;
+  box-shadow: 5px 5px 7px 0 #aaa, -5px -5px 5px 0 #fff;
+  padding: 5px;
+}
+
+.world tr {
+  display: block;
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+p > span {
+  float: right;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  padding: 5px;
+  min-width: 250px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 7px 0 #aaa, -2px -2px 5px 0 #aaa;
+  padding: 5px;
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid #aaa;
+  padding: 7px 15px;
+  margin: 10px 0;
+  background: transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background: #aaa;
+  color: #fff;
+}
